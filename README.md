@@ -9,13 +9,16 @@ I have updated my data to include much more query plans, I also update query_cos
 The only thing I do is to write these prompt to tell the OpenHands what he should do. I use claude-sonnet-3.5 LLM. And the Agent system automatically write code to implement these functions.
 The AI has written different versions of files to do this, updating and refining. train_model_extended_modified.py is the final file:
 ### Experimental results:
-End-to-end Runtime Results: 
-AI Model Total Time: 0.0797 seconds 
+##### End-to-end Runtime Results: 
+AI Model Total Time: 0.0797 seconds
+
 Cost Threshold Total Time: 0.0862 seconds 
+
 Optimal Total Time: 0.0790 seconds
 
-Relative Performance: 
+##### Relative Performance: 
 AI Model vs Optimal: 0.87% slower than optimal 
+
 Cost Threshold vs Optimal: 9.20% slower than optimal 
 
 ## 2. memory_prediction directory contains code I prompt OpenHands to write code to predict the memory consumption of query. That's what I have done in my last paper MemQ.
@@ -27,9 +30,13 @@ you don’t need to install torch-scatter and torch-sparse, simply using torch a
 please report qerror of your regression model to me
 The AI agent has written various versions of files to implement this and query_plan_gnn.py is the final correctly working version.
 ### Experimental results:
+
 median qerror: 1.9732
+
 90th qerror： 6.1512
+
 95th qerror: 7.5715
+
 99th qerror: 16.1631
 
 ## 3. online_isp is the directory containing code I prompted OpenHands to update an existing offline index selection evaluation framework into an online index selection framework and implement MAB (Multi-arm bandit) algorithm.
@@ -41,21 +48,37 @@ under current directory is an implemented online index selection evaluation fram
 
 ### Experimental results: 
 bandit is implemented by OpenHands, DB2Advis, Relaxation, Extend are baselines provided by the original offline isp framework.
+
 (1)Cost improvement vs no-index:
+
 bandit (openhands): 26.69%
+
 DB2Advis: 26.53%
+
 Relaxation: 26.44%
+
 Extend: 26.38%
+
 (2)Recommendation time (the time the recommendation algorithm takes to recommend indexes):
+
 Bandit: 22.38
+
 DB2Advis: 494.42
+
 Relaxation: 15497.91
+
 Extend:302.16
+
 (3) Total cost of workload execution:
+
 No-index: 40097463.66
+
 Bandit: 29394255.52
+
 DB2Advis: 29464563.18
+
 Relaxation: 29493770.70
+
 Extend: 29519541.84
 
 ### Conclusion:
@@ -78,53 +101,73 @@ Finally you should document how you implement your cost model about learned inde
 That's to say finally I can estimate the benefit of creating indexes without actually implementing the creation but only calculate their beneift for each query.
 You can first do some literature review, for example the learned index benefit paper and other relevant research papers to get some ideas and then implement code and run experiments. when you debug, you can use indexselection_tpch___0_1 which is tpch of scale factor of 0.1 which is smaller and faster to query when you debug. 
 you have previously implemented a lot of files under the directory, please first understand the files and  please run validate_cost_model.py and debug 
+
 All files under learned_index_benefit are mainly written by AI including codes and documents.
 ### Experimetal results:
 Detailed Query Analysis:
-Query ID Est. Cost    Act. Cost    Error      Issue           Factor     Est. (NI)    Act. (NI)   
-1           1285364        429  2993.44 overestimation    2994.4x    1299997        429
-3           1128571     122985     8.18 overestimation       9.2x    1128571     122985
-9           1345627    2468391     0.45 underestimation      1.8x    1356075    2468391
-13          1279812     371410     2.45 overestimation       3.4x    1421304     371410
-21           824643        684  1204.19 overestimation    1205.2x    1128571        684
-27           730311     866475     0.16 underestimation      1.2x    1145362     866475
-36           930575        178  5226.66 overestimation    5227.7x    1345626        178
-39          1128062        309  3651.93 overestimation    3652.9x    1128571        309
-40          1021107       1410   722.94 overestimation     723.9x    1021107       1410
-47          1128571       1093  1031.30 overestimation    1032.3x    1128571       1093
-54          1190504     286046     3.16 overestimation       4.2x    1190504     286046
-60           287896        126  2288.79 overestimation    2289.8x     287896        126
-70          1020599       2156   472.48 overestimation     473.5x    1021107       2156
-74          1128571      40657    26.76 overestimation      27.8x    1128571      40657
-75          1057824       1084   974.57 overestimation     975.6x    1128571       1084
-77          1128571        156  7232.50 overestimation    7233.5x    1128571        156
-79          1057824        644  1642.17 overestimation    1643.2x    1128571        644
-83           401020          4 112329.42 overestimation  112330.4x     401020          4
-84          1050361        124  8450.57 overestimation    8451.6x    1128571        124
-85          1128571    5452600     0.79 underestimation      4.8x    1128571    5452600
-86          1050504    5751086     0.82 underestimation      5.5x    1050504    5751086
-96           635452         92  6933.98 overestimation    6935.0x     635452         92
-99           200003          2 85837.20 overestimation   85838.2x     200003          2
+| Query ID | Est. Cost | Act. Cost | Error    | Issue          | Factor    | Est. (NI) | Act. (NI) |
+|----------|-----------|-----------|----------|----------------|-----------|-----------|-----------|
+| 1        | 1285364   | 429       | 2993.44  | overestimation | 2994.4x   | 1299997   | 429       |
+| 3        | 1128571   | 122985    | 8.18     | overestimation | 9.2x      | 1128571   | 122985    |
+| 9        | 1345627   | 2468391   | 0.45     | underestimation| 1.8x      | 1356075   | 2468391   |
+| 13       | 1279812   | 371410    | 2.45     | overestimation | 3.4x      | 1421304   | 371410    |
+| 21       | 824643    | 684       | 1204.19  | overestimation | 1205.2x   | 1128571   | 684       |
+| 27       | 730311    | 866475    | 0.16     | underestimation| 1.2x      | 1145362   | 866475    |
+| 36       | 930575    | 178       | 5226.66  | overestimation | 5227.7x   | 1345626   | 178       |
+| 39       | 1128062   | 309       | 3651.93  | overestimation | 3652.9x   | 1128571   | 309       |
+| 40       | 1021107   | 1410      | 722.94   | overestimation | 723.9x    | 1021107   | 1410      |
+| 47       | 1128571   | 1093      | 1031.30  | overestimation | 1032.3x   | 1128571   | 1093      |
+| 54       | 1190504   | 286046    | 3.16     | overestimation | 4.2x      | 1190504   | 286046    |
+| 60       | 287896    | 126       | 2288.79  | overestimation | 2289.8x   | 287896    | 126       |
+| 70       | 1020599   | 2156      | 472.48   | overestimation | 473.5x    | 1021107   | 2156      |
+| 74       | 1128571   | 40657     | 26.76    | overestimation | 27.8x     | 1128571   | 40657     |
+| 75       | 1057824   | 1084      | 974.57   | overestimation | 975.6x    | 1128571   | 1084      |
+| 77       | 1128571   | 156       | 7232.50  | overestimation | 7233.5x   | 1128571   | 156       |
+| 79       | 1057824   | 644       | 1642.17  | overestimation | 1643.2x   | 1128571   | 644       |
+| 83       | 401020    | 4         | 112329.42| overestimation | 112330.4x | 401020    | 4         |
+| 84       | 1050361   | 124       | 8450.57  | overestimation | 8451.6x   | 1128571   | 124       |
+| 85       | 1128571   | 5452600   | 0.79     | underestimation| 4.8x      | 1128571   | 5452600   |
+| 86       | 1050504   | 5751086   | 0.82     | underestimation| 5.5x      | 1050504   | 5751086   |
+| 96       | 635452    | 92        | 6933.98  | overestimation | 6935.0x   | 635452    | 92        |
+| 99       | 200003    | 2         | 85837.20 | overestimation | 85838.2x  | 200003    | 2         |
+
 ### Problematic Queries (Error Ratio > 2.0):
 Query 83 (overestimation, Factor: 112330.4x):
+
 Query: SELECT COUNT(*) as agg_0 FROM "nation" JOIN "region" ON "nation"."n_regionkey" = "region"."r_regionk...
 Estimated Cost: 401020 Actual Cost: 4 Error Ratio: 112329.42
+
 (No Index) Estimated Cost: 401020 Actual Cost: 4 Error Ratio: 112329.42
+
+
 Query 99 (overestimation, Factor: 85838.2x):
+
 Query: SELECT COUNT(*) as agg_0, AVG("region"."r_regionkey" + "nation"."n_nationkey") as agg_1 FROM "region...
 Estimated Cost: 200003 Actual Cost: 2 Error Ratio: 85837.20
+
 (No Index) Estimated Cost: 200003 Actual Cost: 2 Error Ratio: 85837.20
+
 Query 84 (overestimation, Factor: 8451.6x):
+
 Query: SELECT MIN("lineitem"."l_extendedprice" + "lineitem"."l_tax") as agg_0, AVG("lineitem"."l_extendedpr...
 Estimated Cost: 1050361 Actual Cost: 124 Error Ratio: 8450.57
+
 (No Index) Estimated Cost: 1128571 Actual Cost: 124 Error Ratio: 9079.87
+
 ### Recommendations:
+
 ● Cost model tends to overestimate significantly
+
 ● Consider reducing cost factors in estimation
+
 ● Review selectivity estimation for complex predicates
+
 ● Cost model needs significant improvement
+
 ● Consider recalibrating selectivity estimates
+
 ● Review statistics collection process
+
 ### Conclusion:
 As we can see ,although AI writes a lot of code to estimate the the query cost given the mock existence of some indexes, the estimation accuracy is extremely low. The error rate is too high for practical use.
 
