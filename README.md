@@ -1,7 +1,7 @@
 https://github.com/earthwuyang/code_written_by_openhands is a repository containing code written by an AI agent OpenHands.
 OpenHands is a powerful platform for software engineering agents powered by AI: https://github.com/All-Hands-AI/OpenHands.
 
-## row_column_routing contains the code I prompt OpenHands to write a program to train model for row column routing
+## 1. row_column_routing contains the code I prompt OpenHands to write a program to train model for row column routing
 
 ### The prompt I use is:
 for polardb-imci, please predict whether a query will execute faster on row storage or column storage, the query_costs.csv is located in query_costs.csv, containing query_id, use_imci two columns. use_imci=0 if row is faster, use_imci=1 if column is faster.  inside row_plans are <query_id>.json containing row plan json file of query_id . please inspect the json files of row plan  to understand the query execution plan and know how to parse them. please implement deep neural network to predict the binary classification problem: whether a query run faster on row or on column. when you pip install packages, you should -i https://pypi.tuna.tsinghua.edu.cn/simple .
@@ -18,7 +18,7 @@ Relative Performance:
 AI Model vs Optimal: 0.87% slower than optimal 
 Cost Threshold vs Optimal: 9.20% slower than optimal 
 
-## memory_prediction directory contains code I prompt OpenHands to write code to predict the memory consumption of query. That's what I have done in my last paper MemQ.
+## 2. memory_prediction directory contains code I prompt OpenHands to write code to predict the memory consumption of query. That's what I have done in my last paper MemQ.
 ### The prompt I use is:
 I want to predict the peak memory consumption of the execution of a query,  the plans are shown in train_plans.json, val_plans.json, test_plans.json, including peakmem as the peak memory consumption of execution of the query. please implement PyTorch geometric GNN model to do the regression task. use train_plans.json to train, val_plans.json to validate and test_plans.json to test. finally report your Qerror on test set. you can pip install -i https://pypi.tuna.tsinghua.edu.cn/simple
 please, 1. first scan all json plans to collect all operator types instead of define only several operator types as python list. 2. add more features from query plans, capturing their tree-structured graph structure and implement complex pytorch geometric GNN models
@@ -32,7 +32,7 @@ median qerror: 1.9732
 95th qerror: 7.5715
 99th qerror: 16.1631
 
-## online_isp is the directory containing code I prompted OpenHands to update an existing offline index selection evaluation framework into an online index selection framework and implement MAB (Multi-arm bandit) algorithm.
+## 3. online_isp is the directory containing code I prompted OpenHands to update an existing offline index selection evaluation framework into an online index selection framework and implement MAB (Multi-arm bandit) algorithm.
 The original index selection evalution framework is: https://github.com/hyrise/index_selection_evaluation
 ### The prompt I use is:
 please understand current offline index selection framework that has already been downloaded in the current  directory by reading the files under current directory, and update it to be an online index selection evaluation framework with dynamically changing workloads. And implement multi-arm bandit algorithm to incrementally update and remove indexes due to workload change, and compare the online multi-arm bandit algorithm with periodically invoking extend algorithm for changing workloads. if you need to pip install packages, you can -i https://pypi.tuna.tsinghua.edu.cn/simple  . you have access to postgres via host: 172.17.0.1 and user wuy, password: ‘wuy’, database:indexselection_tpch___1
@@ -62,7 +62,7 @@ Extend: 29519541.84
 The bandit algorithm implemented by AI has comparable performance to other baselines while only has a small recommendation time, showing its superority in online index selection.
 
 
-## learned_index_benefit is a failed attempt for AI to estimate the cost of query given some simulated indexes. That's to say, to mimick the function of hypopg extention of Postgres.
+## 4. learned_index_benefit is a failed attempt for AI to estimate the cost of query given some simulated indexes. That's to say, to mimick the function of hypopg extention of Postgres.
 ### The prompt I use is: 
 You are expected to implement a Machine learning project to estimate the query cost given a query and some indexes are built. 
 However, you should not actually create indexes, you should input the features of indexes to be built and the feautures of a query into a model and output the query cost supposing the indexes exist.
