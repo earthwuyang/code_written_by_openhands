@@ -1,0 +1,30 @@
+{
+    "benchmark_name": "tpch",
+    "scale_factor": 1,
+    "max_storage_mb": 500,
+    "queries": null,
+    "database_system": "postgres",
+    "host": "host.docker.internal",
+    "port": 5432,
+    "user": "wuy",
+    "password": "",
+    "algorithms": [
+        {
+            "name": "online_bandit",
+            "parameters": {
+                "budget_MB": 500,
+                "max_index_width": 2,
+                "exploration_factor": 0.1,
+                "window_size": 100,
+                "min_utility_threshold": 0.01
+            }
+        },
+        {
+            "name": "extend",
+            "parameters": {
+                "budget_MB": 500,
+                "max_index_width": 2
+            }
+        }
+    ]
+}

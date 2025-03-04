@@ -1,0 +1,35 @@
+{
+    "benchmark_name": "zsce",
+    "scale_factor": 1,
+    "max_storage_mb": 500,
+    "queries": null,
+    "database_system": "postgres",
+    "num_queries": 5,
+    "seed": 42,
+    "connection": {
+        "host": "172.17.0.1",
+        "port": 5432,
+        "user": "wuy",
+        "password": "wuy",
+        "dbname": "indexselection_tpch___1"
+    },
+    "algorithms": [
+        {
+            "name": "online_bandit",
+            "parameters": {
+                "budget_MB": 500,
+                "max_index_width": 2,
+                "exploration_factor": 0.1,
+                "window_size": 5,
+                "min_utility_threshold": 0.01
+            }
+        },
+        {
+            "name": "extend",
+            "parameters": {
+                "budget_MB": 500,
+                "max_index_width": 2
+            }
+        }
+    ]
+}
