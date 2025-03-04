@@ -102,7 +102,10 @@ That's to say finally I can estimate the benefit of creating indexes without act
 You can first do some literature review, for example the learned index benefit paper and other relevant research papers to get some ideas and then implement code and run experiments. when you debug, you can use indexselection_tpch___0_1 which is tpch of scale factor of 0.1 which is smaller and faster to query when you debug. 
 you have previously implemented a lot of files under the directory, please first understand the files and  please run validate_cost_model.py and debug 
 
-All files under learned_index_benefit are mainly written by AI including codes and documents.
+All files under learned_index_benefit are mainly written by AI including codes and documents. 
+
+validate_cost_model.py and index_benefit_estimator.py are the final two main files.
+
 ### Experimetal results:
 Detailed Query Analysis:
 | Query ID | Est. Cost | Act. Cost | Error    | Issue          | Factor    | Est. (NI) | Act. (NI) |
