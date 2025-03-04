@@ -1,0 +1,501 @@
+{
+  "table_sizes": {
+    "customer": 149276,
+    "lineitem": 5929314,
+    "nation": 25,
+    "orders": 1414931,
+    "part": 198902,
+    "partsupp": 868792,
+    "region": 5,
+    "revenue0": 0,
+    "supplier": 10166
+  },
+  "column_stats": {
+    "customer": {
+      "c_custkey": {
+        "type": "bigint(20)",
+        "distinct_count": 150000,
+        "total_count": 150000,
+        "avg_selectivity": 1.0,
+        "min_value": 1.0,
+        "max_value": 150000.0,
+        "avg_value": 75000.5
+      },
+      "c_name": {
+        "type": "varchar(25)",
+        "distinct_count": 150000,
+        "total_count": 150000,
+        "avg_selectivity": 1.0
+      },
+      "c_address": {
+        "type": "varchar(40)",
+        "distinct_count": 150000,
+        "total_count": 150000,
+        "avg_selectivity": 1.0
+      },
+      "c_nationkey": {
+        "type": "bigint(20)",
+        "distinct_count": 25,
+        "total_count": 150000,
+        "avg_selectivity": 0.00016666666666666666,
+        "min_value": 0.0,
+        "max_value": 24.0,
+        "avg_value": 12.0067
+      },
+      "c_phone": {
+        "type": "char(15)",
+        "distinct_count": 150000,
+        "total_count": 150000,
+        "avg_selectivity": 1.0
+      },
+      "c_acctbal": {
+        "type": "decimal(15,2)",
+        "distinct_count": 140187,
+        "total_count": 150000,
+        "avg_selectivity": 0.93458,
+        "min_value": -999.99,
+        "max_value": 9999.99,
+        "avg_value": 4495.512332
+      },
+      "c_mktsegment": {
+        "type": "char(10)",
+        "distinct_count": 5,
+        "total_count": 150000,
+        "avg_selectivity": 3.3333333333333335e-05
+      },
+      "c_comment": {
+        "type": "varchar(117)",
+        "distinct_count": 149965,
+        "total_count": 150000,
+        "avg_selectivity": 0.9997666666666667
+      }
+    },
+    "lineitem": {
+      "l_orderkey": {
+        "type": "bigint(20)",
+        "distinct_count": 1500000,
+        "total_count": 6001215,
+        "avg_selectivity": 0.24994938524948698,
+        "min_value": 1.0,
+        "max_value": 6000000.0,
+        "avg_value": 3000279.6042
+      },
+      "l_partkey": {
+        "type": "bigint(20)",
+        "distinct_count": 200000,
+        "total_count": 6001215,
+        "avg_selectivity": 0.0333265846999316,
+        "min_value": 1.0,
+        "max_value": 200000.0,
+        "avg_value": 100017.9893
+      },
+      "l_suppkey": {
+        "type": "bigint(20)",
+        "distinct_count": 10000,
+        "total_count": 6001215,
+        "avg_selectivity": 0.00166632923499658,
+        "min_value": 1.0,
+        "max_value": 10000.0,
+        "avg_value": 5000.6026
+      },
+      "l_linenumber": {
+        "type": "bigint(20)",
+        "distinct_count": 7,
+        "total_count": 6001215,
+        "avg_selectivity": 1.166430464497606e-06,
+        "min_value": 1.0,
+        "max_value": 7.0,
+        "avg_value": 3.0006
+      },
+      "l_quantity": {
+        "type": "decimal(15,2)",
+        "distinct_count": 50,
+        "total_count": 6001215,
+        "avg_selectivity": 8.3316461749829e-06,
+        "min_value": 1.0,
+        "max_value": 50.0,
+        "avg_value": 25.507967
+      },
+      "l_extendedprice": {
+        "type": "decimal(15,2)",
+        "distinct_count": 933900,
+        "total_count": 6001215,
+        "avg_selectivity": 0.1556184872563306,
+        "min_value": 901.0,
+        "max_value": 104949.5,
+        "avg_value": 38255.138485
+      },
+      "l_discount": {
+        "type": "decimal(15,2)",
+        "distinct_count": 11,
+        "total_count": 6001215,
+        "avg_selectivity": 1.8329621584962379e-06,
+        "min_value": 0.0,
+        "max_value": 0.1,
+        "avg_value": 0.049999
+      },
+      "l_tax": {
+        "type": "decimal(15,2)",
+        "distinct_count": 9,
+        "total_count": 6001215,
+        "avg_selectivity": 1.499696311496922e-06,
+        "min_value": 0.0,
+        "max_value": 0.08,
+        "avg_value": 0.040014
+      },
+      "l_returnflag": {
+        "type": "char(1)",
+        "distinct_count": 3,
+        "total_count": 6001215,
+        "avg_selectivity": 4.998987704989739e-07
+      },
+      "l_linestatus": {
+        "type": "char(1)",
+        "distinct_count": 2,
+        "total_count": 6001215,
+        "avg_selectivity": 3.3326584699931596e-07
+      },
+      "l_shipdate": {
+        "type": "date",
+        "distinct_count": 2526,
+        "total_count": 6001215,
+        "avg_selectivity": 0.00042091476476013607
+      },
+      "l_commitdate": {
+        "type": "date",
+        "distinct_count": 2466,
+        "total_count": 6001215,
+        "avg_selectivity": 0.0004109167893501566
+      },
+      "l_receiptdate": {
+        "type": "date",
+        "distinct_count": 2554,
+        "total_count": 6001215,
+        "avg_selectivity": 0.0004255804866181265
+      },
+      "l_shipinstruct": {
+        "type": "char(25)",
+        "distinct_count": 4,
+        "total_count": 6001215,
+        "avg_selectivity": 6.665316939986319e-07
+      },
+      "l_shipmode": {
+        "type": "char(10)",
+        "distinct_count": 7,
+        "total_count": 6001215,
+        "avg_selectivity": 1.166430464497606e-06
+      },
+      "l_comment": {
+        "type": "varchar(44)",
+        "distinct_count": 4501941,
+        "total_count": 6001215,
+        "avg_selectivity": 0.7501715902529738
+      }
+    },
+    "nation": {
+      "n_nationkey": {
+        "type": "bigint(20)",
+        "distinct_count": 25,
+        "total_count": 25,
+        "avg_selectivity": 1.0,
+        "min_value": 0.0,
+        "max_value": 24.0,
+        "avg_value": 12.0
+      },
+      "n_name": {
+        "type": "char(25)",
+        "distinct_count": 25,
+        "total_count": 25,
+        "avg_selectivity": 1.0
+      },
+      "n_regionkey": {
+        "type": "bigint(20)",
+        "distinct_count": 5,
+        "total_count": 25,
+        "avg_selectivity": 0.2,
+        "min_value": 0.0,
+        "max_value": 4.0,
+        "avg_value": 2.0
+      },
+      "n_comment": {
+        "type": "varchar(152)",
+        "distinct_count": 25,
+        "total_count": 25,
+        "avg_selectivity": 1.0
+      }
+    },
+    "orders": {
+      "o_orderkey": {
+        "type": "bigint(20)",
+        "distinct_count": 1500000,
+        "total_count": 1500000,
+        "avg_selectivity": 1.0,
+        "min_value": 1.0,
+        "max_value": 6000000.0,
+        "avg_value": 2999991.5
+      },
+      "o_custkey": {
+        "type": "bigint(20)",
+        "distinct_count": 99996,
+        "total_count": 1500000,
+        "avg_selectivity": 0.066664,
+        "min_value": 1.0,
+        "max_value": 149999.0,
+        "avg_value": 75006.0406
+      },
+      "o_orderstatus": {
+        "type": "char(1)",
+        "distinct_count": 3,
+        "total_count": 1500000,
+        "avg_selectivity": 2e-06
+      },
+      "o_totalprice": {
+        "type": "decimal(15,2)",
+        "distinct_count": 1464556,
+        "total_count": 1500000,
+        "avg_selectivity": 0.9763706666666667,
+        "min_value": 857.71,
+        "max_value": 555285.16,
+        "avg_value": 151219.537632
+      },
+      "o_orderdate": {
+        "type": "date",
+        "distinct_count": 2406,
+        "total_count": 1500000,
+        "avg_selectivity": 0.001604
+      },
+      "o_orderpriority": {
+        "type": "char(15)",
+        "distinct_count": 5,
+        "total_count": 1500000,
+        "avg_selectivity": 3.3333333333333333e-06
+      },
+      "o_clerk": {
+        "type": "char(15)",
+        "distinct_count": 1000,
+        "total_count": 1500000,
+        "avg_selectivity": 0.0006666666666666666
+      },
+      "o_shippriority": {
+        "type": "bigint(20)",
+        "distinct_count": 1,
+        "total_count": 1500000,
+        "avg_selectivity": 6.666666666666667e-07,
+        "min_value": 0.0,
+        "max_value": 0.0,
+        "avg_value": 0.0
+      },
+      "o_comment": {
+        "type": "varchar(79)",
+        "distinct_count": 1478684,
+        "total_count": 1500000,
+        "avg_selectivity": 0.9857893333333333
+      }
+    },
+    "part": {
+      "p_partkey": {
+        "type": "bigint(20)",
+        "distinct_count": 200000,
+        "total_count": 200000,
+        "avg_selectivity": 1.0,
+        "min_value": 1.0,
+        "max_value": 200000.0,
+        "avg_value": 100000.5
+      },
+      "p_name": {
+        "type": "varchar(55)",
+        "distinct_count": 199997,
+        "total_count": 200000,
+        "avg_selectivity": 0.999985
+      },
+      "p_mfgr": {
+        "type": "char(25)",
+        "distinct_count": 5,
+        "total_count": 200000,
+        "avg_selectivity": 2.5e-05
+      },
+      "p_brand": {
+        "type": "char(10)",
+        "distinct_count": 25,
+        "total_count": 200000,
+        "avg_selectivity": 0.000125
+      },
+      "p_type": {
+        "type": "varchar(25)",
+        "distinct_count": 150,
+        "total_count": 200000,
+        "avg_selectivity": 0.00075
+      },
+      "p_size": {
+        "type": "bigint(20)",
+        "distinct_count": 50,
+        "total_count": 200000,
+        "avg_selectivity": 0.00025,
+        "min_value": 1.0,
+        "max_value": 50.0,
+        "avg_value": 25.4271
+      },
+      "p_container": {
+        "type": "char(10)",
+        "distinct_count": 40,
+        "total_count": 200000,
+        "avg_selectivity": 0.0002
+      },
+      "p_retailprice": {
+        "type": "decimal(15,2)",
+        "distinct_count": 20899,
+        "total_count": 200000,
+        "avg_selectivity": 0.104495,
+        "min_value": 901.0,
+        "max_value": 2098.99,
+        "avg_value": 1499.496
+      },
+      "p_comment": {
+        "type": "varchar(23)",
+        "distinct_count": 127459,
+        "total_count": 200000,
+        "avg_selectivity": 0.637295
+      }
+    },
+    "partsupp": {
+      "ps_partkey": {
+        "type": "bigint(20)",
+        "distinct_count": 200000,
+        "total_count": 800000,
+        "avg_selectivity": 0.25,
+        "min_value": 1.0,
+        "max_value": 200000.0,
+        "avg_value": 100000.5
+      },
+      "ps_suppkey": {
+        "type": "bigint(20)",
+        "distinct_count": 10000,
+        "total_count": 800000,
+        "avg_selectivity": 0.0125,
+        "min_value": 1.0,
+        "max_value": 10000.0,
+        "avg_value": 5000.5
+      },
+      "ps_availqty": {
+        "type": "bigint(20)",
+        "distinct_count": 9999,
+        "total_count": 800000,
+        "avg_selectivity": 0.01249875,
+        "min_value": 1.0,
+        "max_value": 9999.0,
+        "avg_value": 5003.2269
+      },
+      "ps_supplycost": {
+        "type": "decimal(15,2)",
+        "distinct_count": 99865,
+        "total_count": 800000,
+        "avg_selectivity": 0.12483125,
+        "min_value": 1.0,
+        "max_value": 1000.0,
+        "avg_value": 500.525798
+      },
+      "ps_comment": {
+        "type": "varchar(199)",
+        "distinct_count": 799123,
+        "total_count": 800000,
+        "avg_selectivity": 0.99890375
+      }
+    },
+    "region": {
+      "r_regionkey": {
+        "type": "bigint(20)",
+        "distinct_count": 5,
+        "total_count": 5,
+        "avg_selectivity": 1.0,
+        "min_value": 0.0,
+        "max_value": 4.0,
+        "avg_value": 2.0
+      },
+      "r_name": {
+        "type": "char(25)",
+        "distinct_count": 5,
+        "total_count": 5,
+        "avg_selectivity": 1.0
+      },
+      "r_comment": {
+        "type": "varchar(152)",
+        "distinct_count": 5,
+        "total_count": 5,
+        "avg_selectivity": 1.0
+      }
+    },
+    "revenue0": {
+      "supplier_no": {
+        "type": "bigint(20)",
+        "distinct_count": 10000,
+        "total_count": 10000,
+        "avg_selectivity": 1.0,
+        "min_value": 1.0,
+        "max_value": 10000.0,
+        "avg_value": 5000.5
+      },
+      "total_revenue": {
+        "type": "decimal(53,4)",
+        "distinct_count": 10000,
+        "total_count": 10000,
+        "avg_selectivity": 1.0,
+        "min_value": 115998.0392,
+        "max_value": 1752069.6208,
+        "avg_value": 833720.10050377
+      }
+    },
+    "supplier": {
+      "s_suppkey": {
+        "type": "bigint(20)",
+        "distinct_count": 10000,
+        "total_count": 10000,
+        "avg_selectivity": 1.0,
+        "min_value": 1.0,
+        "max_value": 10000.0,
+        "avg_value": 5000.5
+      },
+      "s_name": {
+        "type": "char(25)",
+        "distinct_count": 10000,
+        "total_count": 10000,
+        "avg_selectivity": 1.0
+      },
+      "s_address": {
+        "type": "varchar(40)",
+        "distinct_count": 10000,
+        "total_count": 10000,
+        "avg_selectivity": 1.0
+      },
+      "s_nationkey": {
+        "type": "bigint(20)",
+        "distinct_count": 25,
+        "total_count": 10000,
+        "avg_selectivity": 0.0025,
+        "min_value": 0.0,
+        "max_value": 24.0,
+        "avg_value": 11.9353
+      },
+      "s_phone": {
+        "type": "char(15)",
+        "distinct_count": 10000,
+        "total_count": 10000,
+        "avg_selectivity": 1.0
+      },
+      "s_acctbal": {
+        "type": "decimal(15,2)",
+        "distinct_count": 9955,
+        "total_count": 10000,
+        "avg_selectivity": 0.9955,
+        "min_value": -998.22,
+        "max_value": 9999.72,
+        "avg_value": 4510.354865
+      },
+      "s_comment": {
+        "type": "varchar(101)",
+        "distinct_count": 10000,
+        "total_count": 10000,
+        "avg_selectivity": 1.0
+      }
+    }
+  }
+}

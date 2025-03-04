@@ -1,0 +1,617 @@
+{
+  "9030756568687677636": {
+    "sql": "SELECT \"orders\".\"o_comment\", \"orders\".\"o_custkey\", \"orders\".\"o_orderpriority\" FROM \"orders\" WHERE \"orders\".\"o_totalprice\" = 173275.00000462032",
+    "actual_cost": 0,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  },
+  "9031077781972054931": {
+    "sql": "SELECT \"lineitem\".\"l_linestatus\", \"lineitem\".\"l_commitdate\", \"lineitem\".\"l_orderkey\" FROM \"lineitem\" WHERE \"lineitem\".\"l_discount\" = 0.08291229140198042",
+    "actual_cost": 0,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  },
+  "7039637899827158423": {
+    "sql": "SELECT \"part\".\"p_name\", \"part\".\"p_size\", \"part\".\"p_type\" FROM \"part\" WHERE \"part\".\"p_container\" = 'MED CASE'",
+    "actual_cost": 6836.65,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  },
+  "1931469027858045581": {
+    "sql": "SELECT \"orders\".\"o_comment\", \"orders\".\"o_custkey\", \"orders\".\"o_orderpriority\" FROM \"orders\" WHERE \"orders\".\"o_totalprice\" = 173275.00000462032",
+    "actual_cost": 0,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  },
+  "1906436149331191612": {
+    "sql": "SELECT \"lineitem\".\"l_linestatus\", \"lineitem\".\"l_commitdate\", \"lineitem\".\"l_orderkey\" FROM \"lineitem\" WHERE \"lineitem\".\"l_discount\" = 0.08291229140198042",
+    "actual_cost": 0,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  },
+  "3621991864740405336": {
+    "sql": "SELECT \"part\".\"p_name\", \"part\".\"p_size\", \"part\".\"p_type\" FROM \"part\" WHERE \"part\".\"p_container\" = 'MED CASE'",
+    "actual_cost": 6836.65,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  },
+  "6346140255995057914": {
+    "sql": "SELECT \"orders\".\"o_comment\", \"orders\".\"o_custkey\", \"orders\".\"o_orderpriority\" FROM \"orders\" WHERE \"orders\".\"o_totalprice\" = 173275.00000462032",
+    "actual_cost": 0,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  },
+  "1687207656065837150": {
+    "sql": "SELECT \"lineitem\".\"l_linestatus\", \"lineitem\".\"l_commitdate\", \"lineitem\".\"l_orderkey\" FROM \"lineitem\" WHERE \"lineitem\".\"l_discount\" = 0.08291229140198042",
+    "actual_cost": 0,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  },
+  "3852782657612677689": {
+    "sql": "SELECT \"part\".\"p_name\", \"part\".\"p_size\", \"part\".\"p_type\" FROM \"part\" WHERE \"part\".\"p_container\" = 'MED CASE'",
+    "actual_cost": 6836.65,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  },
+  "242228869612093837": {
+    "sql": "SELECT \"orders\".\"o_comment\", \"orders\".\"o_custkey\", \"orders\".\"o_orderpriority\" FROM \"orders\" WHERE \"orders\".\"o_totalprice\" = 173275.00000462032",
+    "actual_cost": 0,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  },
+  "7645356270700056557": {
+    "sql": "SELECT \"lineitem\".\"l_linestatus\", \"lineitem\".\"l_commitdate\", \"lineitem\".\"l_orderkey\" FROM \"lineitem\" WHERE \"lineitem\".\"l_discount\" = 0.08291229140198042",
+    "actual_cost": 0,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  },
+  "8995752575002970236": {
+    "sql": "SELECT \"part\".\"p_name\", \"part\".\"p_size\", \"part\".\"p_type\" FROM \"part\" WHERE \"part\".\"p_container\" = 'MED CASE'",
+    "actual_cost": 6836.65,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  },
+  "2549835837016557194": {
+    "sql": "SELECT \"orders\".\"o_comment\", \"orders\".\"o_custkey\", \"orders\".\"o_orderpriority\" FROM \"orders\" WHERE \"orders\".\"o_totalprice\" = 173275.00000462032",
+    "actual_cost": 0,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  },
+  "1194689555764627001": {
+    "sql": "SELECT \"lineitem\".\"l_linestatus\", \"lineitem\".\"l_commitdate\", \"lineitem\".\"l_orderkey\" FROM \"lineitem\" WHERE \"lineitem\".\"l_discount\" = 0.08291229140198042",
+    "actual_cost": 0,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  },
+  "6858117097809264107": {
+    "sql": "SELECT \"part\".\"p_name\", \"part\".\"p_size\", \"part\".\"p_type\" FROM \"part\" WHERE \"part\".\"p_container\" = 'MED CASE'",
+    "actual_cost": 6836.65,
+    "indexes": [
+      [
+        "orders",
+        [
+          "o_orderkey"
+        ],
+        true
+      ],
+      [
+        "customer",
+        [
+          "c_custkey"
+        ],
+        true
+      ],
+      [
+        "lineitem",
+        [
+          "l_orderkey"
+        ],
+        false
+      ],
+      [
+        "part",
+        [
+          "p_partkey"
+        ],
+        true
+      ],
+      [
+        "supplier",
+        [
+          "s_suppkey"
+        ],
+        true
+      ]
+    ]
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "tp_results": {
+    "timestamp": "2025-03-03T15:51:29.473580",
+    "total_queries": 30,
+    "successful_validations": 9,
+    "accuracy_stats": {
+      "error_ratios": [
+        28.093488770084765,
+        723.2314582586887,
+        6352.749999999999,
+        28.325116289355933,
+        27.9391977419214,
+        6352.749999999999,
+        0.13043478260869565,
+        17.518518518518515,
+        6352.749999999999
+      ],
+      "accurate_estimates": 1,
+      "avg_error": 2209.276468262353,
+      "median_error": 28.325116289355933,
+      "accuracy_rate": 0.1111111111111111
+    },
+    "query_details": [
+      {
+        "query_id": 3,
+        "query": "SELECT \"part\".\"p_name\", \"part\".\"p_size\", \"part\".\"p_type\" FROM \"part\" WHERE \"part\".\"p_container\" = 'M...",
+        "estimated_cost": 198902.0,
+        "actual_cost": 6836.65,
+        "error_ratio": 28.093488770084765,
+        "is_accurate": false,
+        "issue": "overestimation",
+        "factor": 29.093488770084765
+      },
+      {
+        "query_id": 4,
+        "query": "SELECT \"orders\".\"o_orderstatus\", \"orders\".\"o_orderpriority\", \"orders\".\"o_clerk\" FROM \"orders\" WHERE ...",
+        "estimated_cost": 1414931.0,
+        "actual_cost": 1953.7,
+        "error_ratio": 723.2314582586887,
+        "is_accurate": false,
+        "issue": "overestimation",
+        "factor": 724.2314582586886
+      },
+      {
+        "query_id": 7,
+        "query": "SELECT \"supplier\".\"s_address\", \"supplier\".\"s_name\", \"supplier\".\"s_comment\" FROM \"supplier\" WHERE \"su...",
+        "estimated_cost": 10166.0,
+        "actual_cost": 1.6,
+        "error_ratio": 6352.749999999999,
+        "is_accurate": false,
+        "issue": "overestimation",
+        "factor": 6353.75
+      },
+      {
+        "query_id": 12,
+        "query": "SELECT \"part\".\"p_size\", \"part\".\"p_mfgr\", \"part\".\"p_retailprice\" FROM \"part\" WHERE \"part\".\"p_containe...",
+        "estimated_cost": 198902.0,
+        "actual_cost": 6782.65,
+        "error_ratio": 28.325116289355933,
+        "is_accurate": false,
+        "issue": "overestimation",
+        "factor": 29.325116289355933
+      },
+      {
+        "query_id": 13,
+        "query": "SELECT \"part\".\"p_partkey\", \"part\".\"p_retailprice\", \"part\".\"p_comment\" FROM \"part\" WHERE \"part\".\"p_co...",
+        "estimated_cost": 198902.0,
+        "actual_cost": 6873.1,
+        "error_ratio": 27.9391977419214,
+        "is_accurate": false,
+        "issue": "overestimation",
+        "factor": 28.9391977419214
+      },
+      {
+        "query_id": 14,
+        "query": "SELECT \"supplier\".\"s_suppkey\", \"supplier\".\"s_address\", \"supplier\".\"s_name\" FROM \"supplier\" WHERE \"su...",
+        "estimated_cost": 10166.0,
+        "actual_cost": 1.6,
+        "error_ratio": 6352.749999999999,
+        "is_accurate": false,
+        "issue": "overestimation",
+        "factor": 6353.75
+      },
+      {
+        "query_id": 15,
+        "query": "SELECT \"region\".\"r_regionkey\", \"region\".\"r_name\", \"region\".\"r_comment\" FROM \"region\"",
+        "estimated_cost": 5.0,
+        "actual_cost": 5.75,
+        "error_ratio": 0.13043478260869565,
+        "is_accurate": true,
+        "issue": "underestimation",
+        "factor": 1.15
+      },
+      {
+        "query_id": 17,
+        "query": "SELECT \"nation\".\"n_name\", \"nation\".\"n_regionkey\", \"nation\".\"n_nationkey\" FROM \"nation\" WHERE \"nation...",
+        "estimated_cost": 25.0,
+        "actual_cost": 1.35,
+        "error_ratio": 17.518518518518515,
+        "is_accurate": false,
+        "issue": "overestimation",
+        "factor": 18.51851851851852
+      },
+      {
+        "query_id": 30,
+        "query": "SELECT \"supplier\".\"s_address\", \"supplier\".\"s_name\", \"supplier\".\"s_acctbal\" FROM \"supplier\" WHERE \"su...",
+        "estimated_cost": 10166.0,
+        "actual_cost": 1.6,
+        "error_ratio": 6352.749999999999,
+        "is_accurate": false,
+        "issue": "overestimation",
+        "factor": 6353.75
+      }
+    ],
+    "skipped_queries": 21
+  },
+  "ap_results": {
+    "timestamp": "2025-03-03T15:51:29.482612",
+    "total_queries": 30,
+    "successful_validations": 6,
+    "accuracy_stats": {
+      "error_ratios": [
+        3027.530390215492,
+        2.670595763711022,
+        0.45485652271567306,
+        2.445816332643293,
+        654.3885138703242,
+        0.15714730623376955
+      ],
+      "accurate_estimates": 2,
+      "avg_error": 614.60788666852,
+      "median_error": 2.5582060481771576,
+      "accuracy_rate": 0.3333333333333333
+    },
+    "query_details": [
+      {
+        "query_id": 1,
+        "query": "SELECT MAX(\"lineitem\".\"l_quantity\") as agg_0 FROM \"lineitem\" JOIN \"partsupp\" ON \"lineitem\".\"l_partke...",
+        "estimated_cost": 1299996.67,
+        "actual_cost": 429.25,
+        "error_ratio": 3027.530390215492,
+        "is_accurate": false,
+        "issue": "overestimation",
+        "factor": 3028.530390215492
+      },
+      {
+        "query_id": 3,
+        "query": "SELECT AVG(\"lineitem\".\"l_discount\" + \"customer\".\"c_nationkey\") as agg_0 FROM \"nation\" JOIN \"region\" ...",
+        "estimated_cost": 451428.22000000003,
+        "actual_cost": 122984.99999999999,
+        "error_ratio": 2.670595763711022,
+        "is_accurate": false,
+        "issue": "overestimation",
+        "factor": 3.6705957637110225
+      },
+      {
+        "query_id": 9,
+        "query": "SELECT SUM(\"partsupp\".\"ps_availqty\" + \"lineitem\".\"l_quantity\") as agg_0, MIN(\"partsupp\".\"ps_partkey\"...",
+        "estimated_cost": 1345627.1385572068,
+        "actual_cost": 2468390.79,
+        "error_ratio": 0.45485652271567306,
+        "is_accurate": true,
+        "issue": "underestimation",
+        "factor": 1.8343794646164986
+      },
+      {
+        "query_id": 13,
+        "query": "SELECT SUM(\"orders\".\"o_custkey\") as agg_0, MIN(\"partsupp\".\"ps_suppkey\" + \"lineitem\".\"l_orderkey\") as...",
+        "estimated_cost": 1279811.5055611287,
+        "actual_cost": 371410.25000000006,
+        "error_ratio": 2.445816332643293,
+        "is_accurate": false,
+        "issue": "overestimation",
+        "factor": 3.4458163326432927
+      },
+      {
+        "query_id": 21,
+        "query": "SELECT MAX(\"lineitem\".\"l_linenumber\") as agg_0 FROM \"nation\" JOIN \"supplier\" ON \"nation\".\"n_nationke...",
+        "estimated_cost": 448443.0367306306,
+        "actual_cost": 684.24,
+        "error_ratio": 654.3885138703242,
+        "is_accurate": false,
+        "issue": "overestimation",
+        "factor": 655.3885138703241
+      },
+      {
+        "query_id": 27,
+        "query": "SELECT SUM(\"orders\".\"o_shippriority\") as agg_0 FROM \"customer\" JOIN \"orders\" ON \"customer\".\"c_custke...",
+        "estimated_cost": 730310.8974019447,
+        "actual_cost": 866475.13,
+        "error_ratio": 0.15714730623376955,
+        "is_accurate": true,
+        "issue": "underestimation",
+        "factor": 1.1864469407240872
+      }
+    ],
+    "skipped_queries": 24
+  }
+}
